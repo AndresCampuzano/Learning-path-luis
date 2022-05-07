@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Title</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .hero {
+            background-image: url("images/image-header.jpg");
+            object-fit: contain;
+            object-position: bottom;
+            height: 100vh;
+            background-repeat: no-repeat;
+
+        }
+
+        .grid {
+            text-align: center;
+        }
+
+        /*768 px and above*/
+        @media only screen and (min-width: 768px) {
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        /*768 px and above*/
+        @media only screen and (min-width: 768px) {
+            .grid__item:nth-child(odd) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid__item:nth-child(even) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-flow: dense;
+                direction: rtl;
+            }
+        }
+
+        .grid__item__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .grid__item__text {
+            padding: 45px 12px;
+        }
+        .grid__item__text h2 {
+            margin-bottom: 10px;
+        }
+        .grid__item__text p {
+            margin-bottom: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="hero">
+
+    </section>
+    <main class="content">
+        <section class="grid">
+            <div class="grid__item">
+                <div>
+                    <img class="grid__item__img" src="images/image-transform.jpg" alt="egg with yellow background color">
+                </div>
+                <div class="grid__item__text">
+                    <h2>Transform your brand</h2>
+                    <p>lorem ipsum dolor etc lorem ipsum dolor etc lorem ipsum dolor etc lorem ipsum dolor etc lorem ipsum dolor etc lorem ipsum lorem ipsum dolor etc lorem ipsum lorem ipsum dolor etc lorem ipsum</p>
+                    <a href="#">LEARN MORE</a>
+                </div>
+            </div>
+            <div class="grid__item">
+                <div>
+                    <img class="grid__item__img" src="images/image-stand-out.jpg" alt="glass cup with salmon background">
+                </div>
+                <div class="grid__item__text">
+                    <h2>Stand out to the right audience</h2>
+                    <p>lorem ipsum dolor etc lorem ipsum dolor etc lorem ipsum dolor etc lorem ipsum dolor etc lorem ipsum dolor etc lorem ipsum lorem ipsum dolor etc lorem ipsum lorem ipsum dolor etc lorem ipsum</p>
+                    <a href="#">LEARN MORE</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
